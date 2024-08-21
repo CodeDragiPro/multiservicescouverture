@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full top-0 left-0 z-10 text-white uppercase text-m font-thin">
+    <nav className="fixed w-full top-0 left-0 z-10 text-white uppercase text-m font-light">
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <div className="font-bold">Multiservices Couverture</div>
         <ul className="hidden md:flex space-x-6 text-m">
