@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaAlignRight } from "react-icons/fa6";
+import { FaAlignRight } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import Button from "./Button";
 
@@ -11,8 +11,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full top-0 left-0 z-10 text-white uppercase text-m font-light">
-      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
+    <nav className="fixed w-full top-0 left-0 z-40 text-white uppercase text-m font-light bg-custom-gradient">
+      <div className="flex justify-between items-center px-4 py-2 max-w-screen-xl mx-auto">
         <div className="font-bold">Multiservices Couverture</div>
         <ul className="hidden md:flex space-x-6 text-m">
           <li>
@@ -22,7 +22,7 @@ const Navbar = () => {
           </li>
           <li>
             <a href="#" className="hover:text-secondary">
-              a propos{" "}
+              a propos
             </a>
           </li>
           <li>
@@ -31,7 +31,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="#" className="">
+            <a href="#">
               <Button name="Contact" />
             </a>
           </li>
@@ -46,29 +46,29 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black flex justify-center items-center z-20">
+        <div className="fixed inset-0 bg-black flex flex-col justify-center items-center z-40">
           <IoMdClose
             onClick={toggleMenu}
-            className="absolute top-3 right-3 text-2xl cursor-pointer"
+            className="absolute top-3 right-3 text-2xl text-white cursor-pointer"
           />
-          <ul className="text-center space-y-8">
+          <ul className="text-center space-y-8 text-white">
             <li>
-              <a href="#" className="">
+              <a href="#" className="text-lg">
                 accueil
               </a>
             </li>
             <li>
-              <a href="#" className="">
+              <a href="#" className="text-lg">
                 a propos
               </a>
             </li>
             <li>
-              <a href="#" className="">
+              <a href="#" className="text-lg">
                 services
               </a>
             </li>
             <li>
-              <a href="#" className="">
+              <a href="#">
                 <Button name="Contact" />
               </a>
             </li>
