@@ -9,7 +9,10 @@ export default {
       'primary': '#2d3b43',
       'secondary': '#4d6f67',
       'white': '#ffffff',
-      'black': '#000000'
+      'black': '#000000',
+      'gray' : '#9ca3af',
+      'grayprimary' : '#6b7280',
+      'white' : '#f8fafc'
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
