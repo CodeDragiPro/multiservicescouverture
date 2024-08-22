@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import WhatWeOffer from './components/WhatWeOffer'
 import HowWeWork from './components/HowWeWork'
+import WhyChooseUs from './components/WhyChooseUs'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <About/>
         <WhatWeOffer/>
         <HowWeWork/>
+        <WhyChooseUs/>
       </div>
     </div>
   )
