@@ -12,27 +12,27 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full top-0 left-0 z-40 text-white uppercase text-m font-light bg-custom-gradient">
-      <div className="flex justify-between items-center px-4 py-2 max-w-screen-xl mx-auto">
+      <div className="flex justify-between items-center px-4 py-4 max-w-screen-xl mx-auto">
         <div className="font-bold">Multiservices Couverture</div>
         <ul className="hidden md:flex space-x-6 text-m">
-          <li>
+          <li className="pt-2">
             <a href="#" className="hover:text-secondary">
               accueil
             </a>
           </li>
-          <li>
+          <li className="pt-2">
             <a href="#" className="hover:text-secondary">
               a propos
             </a>
           </li>
-          <li>
+          <li className="pt-2">
             <a href="#" className="hover:text-secondary">
               services
             </a>
           </li>
           <li>
             <a href="#">
-              <Button name="Contact" />
+              <Button name="Contact" animation="animate-pulse" />
             </a>
           </li>
         </ul>
