@@ -15,7 +15,7 @@ const HowWeWork = () => {
 
   return (
     <div className="bg-custom-gradient p-4">
-      <h1 className='text-2xl font-bold uppercase mb-8 text-white text-center'>Ce que nous proposons</h1>
+      <h1 className='text-2xl font-bold uppercase mb-8 text-white text-center'>Comment ça marche ?</h1>
       <div className="flex items-center justify-center">
       <ol className="relative text-gray-500 border-s border-gray-200 m-4">
         <li className="mb-10 ms-6">

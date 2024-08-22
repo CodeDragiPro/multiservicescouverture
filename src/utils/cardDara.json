@@ -1,0 +1,98 @@
+[
+    {
+      "id": 1,
+      "imgSrc": "demoussagedetoit.jpg",
+      "alt": "demoussage",
+      "title": "Démoussage de toit",
+      "description": "Le démoussage de toit élimine les mousses et lichens qui abîment les tuiles et prévient les infiltrations.",
+      "steps": [
+        "Inspection du toit pour évaluer l’état.",
+        "Application d’un traitement anti-mousse.",
+        "Nettoyage à haute pression pour retirer les débris.",
+        "Application d’un traitement protecteur."
+      ]
+    },
+    {
+      "id": 2,
+      "imgSrc": "couverturecomplete.jpg",
+      "alt": "couverture complète",
+      "title": "Couverture complète",
+      "description": "La couverture complète consiste à rénover ou poser un nouveau toit pour garantir une isolation et une protection optimales.",
+      "steps": [
+        "Dépose de l’ancienne couverture si nécessaire.",
+        "Pose de l’isolant et des éléments d'étanchéité.",
+        "Installation des nouvelles tuiles ou ardoises.",
+        "Finitions et vérification de l’étanchéité."
+      ]
+    },
+    {
+      "id": 3,
+      "imgSrc": "posedeposegouttiere.jpg",
+      "alt": "pose et dépose de gouttières",
+      "title": "Pose et dépose de gouttières",
+      "description": "La pose et la dépose de gouttières assurent une gestion optimale des eaux pluviales pour protéger la maison.",
+      "steps": [
+        "Dépose des anciennes gouttières si existantes.",
+        "Mesure et découpe des nouvelles gouttières.",
+        "Installation des supports et fixation des gouttières.",
+        "Vérification de l’écoulement et des raccords."
+      ]
+    },
+    {
+      "id": 4,
+      "imgSrc": "https://via.placeholder.com/1440x960?text=a+venir",
+      "alt": "changement ou création de vélux",
+      "title": "Changement ou création de vélux",
+      "description": "Changer ou créer un Vélux permet d’apporter lumière naturelle et aération dans les combles.",
+      "steps": [
+        "Prise de mesures pour l’emplacement.",
+        "Dépose de l’ancienne fenêtre si besoin.",
+        "Découpe et préparation de l’ouverture",
+        "Installation du nouveau Vélux et des raccords d’étanchéité.",
+        "Vérification de l’étanchéité et des finitions."
+      ]
+    },
+    {
+      "id": 5,
+      "imgSrc": "resinedetoit.jpg",
+      "alt": "pose de résine de toit",
+      "title": "Pose de résine de toit",
+      "description": "La pose de résine de toit renforce l’étanchéité et prolonge la durée de vie de la toiture.",
+      "steps": [
+        "Nettoyage complet de la surface du toit.",
+        "Application d’une première couche de résine.",
+        "Pose d’une toile de renfort pour solidifier.",
+        "Application des couches finales de résine.",
+        "Vérification de l’étanchéité après séchage"
+      ]
+    },
+    {
+      "id": 6,
+      "imgSrc": "bardage.jpg",
+      "alt": "pose de bardage",
+      "title": "Pose de bardage",
+      "description": "Le bardage protège et embellit les façades, tout en améliorant l’isolation thermique.",
+      "steps": [
+        "Préparation et nettoyage de la façade.",
+        "Installation de la structure d’accrochage.",
+        "Pose des panneaux de bardage.",
+        "Finitions et ajustements des angles et bords.",
+        "Vérification de l’alignement et de la fixation."
+      ]
+    },
+    {
+      "id": 7,
+      "imgSrc": "https://via.placeholder.com/1440x960?text=a+venir",
+      "alt": "nettoyage de gouttières",
+      "title": "Nettoyage de gouttières",
+      "description": "Le nettoyage des gouttières évite les obstructions et les débordements qui peuvent endommager la maison.",
+      "steps": [
+        "Inspection visuelle des gouttières.",
+        "Retrait des feuilles et débris accumulés.",
+        "Rinçage des gouttières avec de l’eau sous pression.",
+        "Vérification des descentes et des évacuations.",
+        "Réparation des fuites éventuelles."
+      ]
+    }
+  ]
+  
