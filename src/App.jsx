@@ -7,6 +7,7 @@ import HowWeWork from './components/HowWeWork'
 import WhyChooseUs from './components/WhyChooseUs'
 import OurProjects from './components/OurProjects'
 import Testimonials from './components/Testimonials'
+import Contact from './components/Contact'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <WhyChooseUs/>
         <OurProjects/>
         <Testimonials/>
+        <Contact/>
       </div>
     </div>
   )
