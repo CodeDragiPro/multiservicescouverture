@@ -22,7 +22,7 @@ const Hero = () => {
   const offset = -currentIndex * 100;
 
   return (
-    <section className="relative text-white w-full overflow-hidden pt-10">
+    <section className="relative text-white w-full overflow-hidden">
       <div className="relative w-full overflow-hidden">
         <div
           className="flex transition-transform duration-1000 ease-in-out"

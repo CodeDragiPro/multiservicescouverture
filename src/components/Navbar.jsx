@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full top-0 left-0 z-40 text-white uppercase text-m font-light bg-custom-gradient">
+    <nav className=" w-full top-0 left-0 z-40 text-white uppercase text-m font-light bg-custom-gradient">
       <div className="flex justify-between items-center px-4 py-4 max-w-screen-full mx-auto">
         <div className="font-bold">Multiservices Couverture</div>
         <ul className="hidden md:flex space-x-6 text-m">

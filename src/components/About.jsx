@@ -19,9 +19,7 @@ const About = () => {
           </p>
           <Carousel />
           <div>
-            
           </div>
-          {/* <Button name='en savoir plus' animation="animate-bounce"/> */}
         </div>
       </div>
     </div>

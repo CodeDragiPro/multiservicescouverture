@@ -11,7 +11,7 @@ const CardChooseUs = ({ icon, title, description }) => {
       {/* Text Section */}
       <div>
         <div className="text-xl font-semibold text-gray-800">{title}</div>
-        <div className="text-gray-600 mt-1">{description}</div>
+        <div className="text-gray-500 mt-1 font-medium">{description}</div>
       </div>
     </div>
   );
