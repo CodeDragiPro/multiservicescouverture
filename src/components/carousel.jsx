@@ -8,8 +8,6 @@ const cardData = [
   { id: 1, imgSrc: car1, alt: 'Card 1' },
   { id: 2, imgSrc: car2, alt: 'Card 2' },
   { id: 3, imgSrc: car3, alt: 'Card 3' },
-  { id: 4, imgSrc: 'https://via.placeholder.com/300x200?text=Card+4', alt: 'Card 4' },
-  { id: 5, imgSrc: 'https://via.placeholder.com/300x200?text=Card+5', alt: 'Card 5' },
 ];
 
 const Carousel = () => {

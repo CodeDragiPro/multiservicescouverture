@@ -1,73 +1,88 @@
-import React from 'react';
-
-import projet1 from '../assets/gallery/projet1.jpg';
-import projet2 from '../assets/gallery/projet2.jpg';
-import projet3 from '../assets/gallery/projet3.jpg';
-import projet4 from '../assets/gallery/projet4.jpg';
-import projet5 from '../assets/gallery/projet5.jpg';
-import projet6 from '../assets/gallery/projet6.jpg';
-import projet7 from '../assets/gallery/projet7.jpg';
-import projet8 from '../assets/gallery/projet8.jpg';
-import projet9 from '../assets/gallery/projet9.jpg';
-import projet10 from '../assets/gallery/projet10.jpg';
-import projet11 from '../assets/gallery/projet11.jpg';
-import projet12 from '../assets/gallery/projet12.jpg';
+import React, { useState, useEffect } from 'react';
+import { ref, listAll, getDownloadURL } from 'firebase/storage';
+import { storage } from '../firebaseConfig'; // Assurez-vous que ce chemin est correct
 
 const OurProjects = () => {
-  return (
-    <div className='flex flex-col items-center justify-center bg-custom-gradient py-4'>
-      <h1 className="font-bold uppercase text-2xl text-white mb-8">Nos Projets</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
-        
-        <div className="grid gap-4">
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={projet1} alt="Projet 1" />
-          </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={projet2} alt="Projet 2" />
-          </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={projet3} alt="Projet 3" />
-          </div>
-        </div>
-        
-        <div className="grid gap-4">
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={projet4} alt="Projet 4" />
-          </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={projet5} alt="Projet 5" />
-          </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={projet6} alt="Projet 6" />
-          </div>
-        </div>
-        
-        <div className="grid gap-4">
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={projet7} alt="Projet 7" />
-          </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={projet8} alt="Projet 8" />
-          </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={projet9} alt="Projet 9" />
-          </div>
-        </div>
-        
-        <div className="grid gap-4">
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={projet10} alt="Projet 10" />
-          </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={projet11} alt="Projet 11" />
-          </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={projet12} alt="Projet 12" />
-          </div>
-        </div>
+  const [images, setImages] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const imagesPerPage = 12; // Nombre d'images à afficher par page
 
+  useEffect(() => {
+    const fetchImages = async () => {
+      const photosRef = ref(storage, 'gallery/'); // Le chemin où vos images sont stockées dans Firebase Storage
+      try {
+        const res = await listAll(photosRef);
+        const urls = await Promise.all(res.items.map(async (itemRef) => {
+          const url = await getDownloadURL(itemRef);
+          return url;
+        }));
+        setImages(urls);
+      } catch (error) {
+        console.error('Error fetching images:', error);
+      }
+    };
+
+    fetchImages();
+  }, []);
+
+  // Calculer les images pour la page actuelle
+  const indexOfLastImage = currentPage * imagesPerPage;
+  const indexOfFirstImage = indexOfLastImage - imagesPerPage;
+  const currentImages = images.slice(indexOfFirstImage, indexOfLastImage);
+
+  // Fonction pour passer à la page suivante
+  const nextPage = () => {
+    if (currentPage < Math.ceil(images.length / imagesPerPage)) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  // Fonction pour revenir à la page précédente
+  const prevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  return (
+    <div className='flex flex-col items-center justify-center bg-teal-700 py-4' id='gallery'>
+      <h1 className="font-bold uppercase text-2xl text-white mb-8">Nos Projets</h1>
+      
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4">
+        {currentImages.map((src, index) => (
+          <div
+            key={index}
+            className="aspect-square overflow-hidden rounded-lg shadow-lg bg-white"
+          >
+            <img 
+              className="w-full h-full object-cover"
+              src={src} 
+              alt={`Projet ${index + 1}`} 
+            />
+          </div>
+        ))}
       </div>
+
+      {/* Afficher la pagination uniquement si le nombre total d'images est supérieur à 12 */}
+      {images.length > imagesPerPage && (
+        <div className="flex justify-between items-center w-full max-w-md mt-4">
+          <button 
+            onClick={prevPage} 
+            disabled={currentPage === 1} 
+            className={`px-4 py-2 bg-white text-teal-700 rounded ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-teal-600'}`}
+          >
+            Précédent
+          </button>
+          {/* <span className="text-gray-700">Page {currentPage} sur {Math.ceil(images.length / imagesPerPage)}</span> */}
+          <button 
+            onClick={nextPage} 
+            disabled={currentPage === Math.ceil(images.length / imagesPerPage)} 
+            className={`px-4 py-2 bg-white text-teal-700 rounded ${currentPage === Math.ceil(images.length / imagesPerPage) ? 'opacity-50 cursor-not-allowed' : 'hover:bg-teal-600 '}`}
+          >
+            Suivant
+          </button>
+        </div>
+      )}
     </div>
   );
 };
