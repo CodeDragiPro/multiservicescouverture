@@ -52,7 +52,7 @@ function App() {
                 </PrivateRoute>
               }
             />
-            {/* Ajoutez ici d'autres routes si nécessaire */}
+          
           </Routes>
         </div>
 

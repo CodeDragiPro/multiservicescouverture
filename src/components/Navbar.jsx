@@ -33,7 +33,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <img src={logo} className="md:w-15 w-12" alt="logo" />
             <h1 className="text-white px-4 font-medium uppercase">
-              multiservicescouverture
+              multiservices couverture Yvetot 76
             </h1>
           </div>
         </Link>

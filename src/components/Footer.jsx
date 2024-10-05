@@ -65,7 +65,7 @@ const Footer = () => {
               <FaFacebook className="w-6 h-6" aria-hidden="true" />
               <span className="sr-only">Facebook</span>
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61551836638976" className="text-gray-400 hover:text-gray-100">
+            <a href="https://www.google.com/search?client=safari&rls=en&q=mutltiservices+couverture+Yvetot+76&ie=UTF-8&oe=UTF-8" className="text-gray-400 hover:text-gray-100">
               <FaGoogle className="w-6 h-6" aria-hidden="true" />
               <span className="sr-only">Google</span>
             </a>
